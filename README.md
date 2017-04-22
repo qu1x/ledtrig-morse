@@ -17,7 +17,7 @@ Forked from [OpenWrt][] and distributed as standalone package.
  2. Extract the Linux sources:
 
     ```sh
-    sudo tar -C /usr/src -xJf linux-source-*.tar.xz
+    (cd /usr/src && sudo tar -xJf linux-source-*.tar.xz)
     ```
 
  3. Clone and install this module's sources:
