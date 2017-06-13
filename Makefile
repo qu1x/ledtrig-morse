@@ -1,12 +1,12 @@
-ifndef KVER
-KVER := $(shell uname -r)
+ifndef KERNELRELEASE
+KERNELRELEASE := $(shell uname -r)
 endif
 ifndef KDIR
-KDIR := /lib/modules/$(KVER)/build
+KDIR := /lib/modules/$(KERNELRELEASE)/build
 endif
 
 ifndef TVER
-TVER := $(shell echo $(KVER) | sed -E 's/([^.]+\.[^.]+).*/\1/')
+TVER := $(shell echo $(KERNELRELEASE) | sed -E 's/([^.]+\.[^.]+).*/\1/')
 endif
 ifndef TDIR
 TDIR := /usr/src/linux-source-$(TVER)
